@@ -1,5 +1,7 @@
 # DunderMifflin-WarehouseManagementSystem
 The Warehouse Management System which is designed to meet the all need of the best paper company's warehouse
+#### this project is build up as a simple Warehouse Management systems
+##### Basically In version V1,Orders will hold in mongoDB, clients and employees will be in postgre
 
 V1 Task:
 - [X] Impl PostgreSQL
