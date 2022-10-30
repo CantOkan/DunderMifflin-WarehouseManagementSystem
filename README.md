@@ -2,11 +2,28 @@
 The Warehouse Management System which is designed to meet the all need of the best paper company's warehouse
 
 V1 Task:
-- [ ] Impl PostgreSQL
-  - [ ] Employee,Address
+- [X] Impl PostgreSQL
+  - [X] Employee,Client,Address
   - [ ] Roles
-- [ ] Impl MongoDB
-  - [ ] Orders
+- [X] Impl MongoDB
+  - [X] Orders
 - [ ] Impl RabbitMQ
+
+
+V1 Business:
+- OrderService
+  - [ ] Update(Shipping etc.), Delete,
+  - [ ] Hold geolocation(for googleMaps) of the address
+  - [ ] GroupByLocation etc.
+- ClientService
+  - [ ] Update, Delete
+- EmployeeService
+  - [ ] Create,Update,Delete,Read
+  - [ ] Roles declaration
+  - [ ] Impl. Orders-Client relation
+
+
+
+
 
 
