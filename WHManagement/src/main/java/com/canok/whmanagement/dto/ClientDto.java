@@ -14,9 +14,16 @@ import lombok.NoArgsConstructor;
 public class ClientDto {
 
     private String name;
+    private String username;
+    private String password;
     private AddressDto addressDto;
 
     public Client convertToClient(){
-        return Client.builder().name(name).address(addressDto.convertToAddres()).build();
+        return Client.builder()
+                .name(name)
+                .username(username)
+                .password(password)
+                .address(addressDto.convertToAddres())
+                .build();
     }
 }

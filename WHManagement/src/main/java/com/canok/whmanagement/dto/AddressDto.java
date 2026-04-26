@@ -16,8 +16,11 @@ public class AddressDto {
     private String country;
     private String street;
     private Integer postCode;
+    private Double latitude;
+    private Double longitude;
 
     public Address convertToAddres(){
-        return Address.builder().id(id).city(city).country(country).street(street).postCode(postCode).build();
+        return Address.builder().id(id).city(city).country(country).street(street).postCode(postCode)
+                .latitude(latitude).longitude(longitude).build();
     }
 }

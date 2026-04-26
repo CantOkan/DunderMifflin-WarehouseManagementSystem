@@ -1,4 +1,18 @@
 services:
+  whmanagement:
+    build: ./WHManagement
+    container_name: whmanagement
+    depends_on:
+      - db
+      - mongodb
+      - rabbitmq
+    ports:
+      - "8080:8080"
+    environment:
+      JWT_SECRET: ${JWT_SECRET}
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/dudemif
+      SPRING_DATA_MONGODB_HOST: mongodb
+      SPRING_RABBITMQ_HOST: rabbitmq
   db:
     container_name: postgresWH
     image: postgres
@@ -28,3 +42,13 @@ services:
       - ME_CONFIG_MONGODB_ADMINUSERNAME=rootuser
       - ME_CONFIG_MONGODB_ADMINPASSWORD=rootpass
       - ME_CONFIG_MONGODB_SERVER=mongodb
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmqWH
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest

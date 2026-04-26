@@ -16,3 +16,13 @@ spring:
       port: 27017
       host: localhost
       auto-index-creation: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:wh-management-secret-key-change-this-in-production!!}
+    expiration-ms: 86400000
